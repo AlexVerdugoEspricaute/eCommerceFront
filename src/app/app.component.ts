@@ -1,10 +1,9 @@
 import { UsuarioService } from './Services/usuario.service';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Usuario } from './Interfaces/usuario';
-import { LayoutComponent } from './components/layout/layout.component';
-import { LoginComponent } from './components/login/login.component';
+
 
 
 @Component({
@@ -13,8 +12,7 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     CommonModule,
     RouterOutlet,
-    LayoutComponent,
-    LoginComponent
+    RouterLink
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

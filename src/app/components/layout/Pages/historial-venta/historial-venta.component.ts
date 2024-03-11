@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './historial-venta.component.html',
   styleUrl: './historial-venta.component.css'
 })
-export class HistorialVentaComponent {
+export default class HistorialVentaComponent {
 
 }

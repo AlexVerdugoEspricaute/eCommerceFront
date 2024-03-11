@@ -1,23 +1,29 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
-import { LayoutComponent } from './components/layout/layout.component';
+
 
 export const routes: Routes = [
 
     {
-        path: '',
-        component:LoginComponent,pathMatch:"full"
+        path:'layout', 
+    loadComponent: ()=> import('./components/layout/layout.component')
     },
     {
-        path: 'login',
-        component:LoginComponent,pathMatch:"full"
+        path:'productos', 
+    loadComponent: ()=> import('./components/layout/Pages/producto/producto.component')
     },
     {
-        path: 'pages',
-        loadChildren:() => import("./components/layout/layout.routes").then(m => m.LAYOUT_ROUTES)
-    }, 
+        path:'historial-venta', 
+    loadComponent: ()=> import('./components/layout/Pages/historial-venta/historial-venta.component')
+    },
     {
-        path: '**',
-        redirectTo:'Login',pathMatch:"full"
-    }
+        path:'venta', 
+    loadComponent: ()=> import('./components/layout/Pages/venta/venta.component')
+    },
+    {
+        path:'login', 
+    loadComponent: ()=> import('./components/login/login.component')
+    },
+    {path:'',redirectTo:'layout',pathMatch:'full'},
+    {path:'**',redirectTo:'layout',pathMatch:'full'},
 ];
+
