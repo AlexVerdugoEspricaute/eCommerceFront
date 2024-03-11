@@ -1,3 +1,8 @@
+<div align="center">
+  <img  width="80%" height="40%" src="https://i.imgur.com/0UNE4Ny.png" alt="image">
+</div>
+
+
 # AppSistemaVenta
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
